@@ -1,0 +1,609 @@
+ *{
+     margin:0;
+     padding:0;
+     
+ }
+
+ html{
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    
+ }
+ section{
+     height: 100vh;
+ }
+ .klocki li{
+    display: inline-block;
+}
+        
+    a {
+        position: relative;
+        display: block;
+        margin:  auto;
+        font-size: 15px;
+        padding: 10px 40px;
+        border: 3px solid black;
+        overflow: hidden;
+        color: black;
+        transition: .15s .15s;
+        text-decoration: none;  
+        
+    }
+    a::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background-color: black;
+        transform:translateY(-50%);
+        top:50%;
+        left: 100%;
+        transition: left .3s, height .1s;
+        z-index: -1;
+    }
+    
+    a:hover::before{
+        left:0;
+        height: 102%;
+    }
+    a:hover{
+        color:orange;
+    }
+
+    .menu_ico{
+        position: absolute;
+        right:7%;
+        top:20px;
+        }
+    
+    
+
+ 
+ 
+ header{
+    border-bottom: 2px solid orange;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    z-index: 2;
+
+}
+
+ul{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 1024px;
+    margin:0 auto;
+    position: relative;
+    left:10%;
+    
+}
+li{
+    display:inline-block;
+    padding: 25px;
+}
+
+a{
+    font-size: 25px;
+
+}
+
+
+.menu_ico{
+    margin-top:20px;
+}
+.fa-phone{
+    font-size: 20px;
+}
+p.telefon{
+    position: relative;
+    float: right;
+    margin-left: 5px;
+
+}
+
+div.logo{
+
+        float: left;
+        padding-left:40px;
+        padding-top:10px;
+        
+    }
+
+
+
+
+
+    .team{
+        width:100%;
+        height: 90vh;
+        overflow: hidden;
+        padding-top:10%;
+        position:relative;
+    }
+    .team img.color{
+        position: relative;
+        bottom:0;
+        right: 0;
+        height: 10% ;
+        width: 10%;}
+
+
+
+    div.tekst{
+    margin-top: -3%;
+    text-align: center;
+    text-transform:uppercase;
+}
+
+
+
+
+
+
+.team{
+    width:100%;
+    height: 80vh;
+    overflow: hidden;
+    position:relative;
+    z-index: -2;
+    background-color: #ccc;
+    
+    
+}
+.team img.color{
+    position: absolute;
+    bottom:0;
+    right: -3%;
+    height: 40%;
+    width: 30%;
+    z-index: -1;
+    animation: color 4s linear infinite;
+}
+.team img.gray{
+    position: absolute;
+    bottom:0;
+    left: 25%;
+    height: 100% ;
+    z-index: -2;
+    opacity: 0.2;
+    animation: gray 4s linear infinite;
+}
+    
+.team .member{
+    position: absolute;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 15%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: text 4s linear infinite;
+}
+.team h1{
+    font-size: 2.5rem;
+}
+.team h2{
+    font-size: 1.5rem;
+}
+
+@keyframes color{
+    0% {
+        transform:translateX(0);
+        opacity: 0;
+    }
+
+    8%{
+        opacity:0;
+
+    }
+    13% {
+        opacity:1;
+    }
+
+    87%{
+        opacity:1
+    }
+
+    92%{
+        opacity:0
+    }
+
+
+    100% {
+        transform: translateX(-5%);
+        opacity: 0;
+    }
+}
+
+@keyframes gray{
+    0% {
+        transform:translateX(0) scale(1);
+        opacity: 0;
+    }
+
+    8%{
+        opacity:0;
+
+    }
+    13% {
+        opacity:.2;
+    }
+
+    87%{
+        opacity:.2;
+    }
+
+    92%{
+        opacity:0
+    }
+
+
+    100% {
+        transform: translateX(5%) scale(1.1);
+        opacity: 0;
+    }
+
+}
+
+
+@keyframes text{
+
+    0% {
+        transform:scale(1);
+        opacity: 0;
+    }
+
+    8%{
+        opacity:0;
+
+    }
+    13% {
+        opacity:1;
+    }
+
+    87%{
+        opacity:1;
+    }
+
+    92%{
+        opacity:0
+    }
+
+
+    100% {
+        transform: translateX(5%) scale(1.1);
+        opacity: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+div.wstep{
+    padding-top: 150px;
+    margin-left:10%;
+}
+
+.oferta h1{
+    padding-top:20px;
+    text-align: center;
+    padding-bottom: 20px;
+    text-decoration:underline 2px ;
+
+}
+
+.naglowek h1{
+    padding-top: 5%;
+    text-align: center;
+    text-decoration: underline;
+}
+.naglowek p{
+    padding-top: 2%;
+}
+
+.znaczniki{
+    width: 60%;
+    border: orange solid 3px;
+    margin-left: 20%;
+    margin-top:2px;
+    background-image: url(img/tatuaz.png);
+    background-size: 30% 60%;
+    background-position: 55px 85px;
+    background-repeat: no-repeat;
+}
+.znaczniki h3{
+    padding-top:4%;
+    text-decoration: underline;
+}
+
+.punkty {
+    margin-top: 4%;
+    line-height: 0.9cm;
+}
+.naglowek1 h1{
+    text-align: center;
+    padding-top: 5%;
+    text-transform:uppercase;
+    text-decoration: underline;
+}
+
+.naglowek1 p{
+    padding-top: 2%;
+}
+
+.naglowek1 h4{
+    text-align: center;
+    background-color: black;
+    color: white;
+    line-height: 10vh;
+    margin-top: 2%;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+    div#fotografia {
+        position: absolute;
+        background-image: url("img/1.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+    
+    div#fotografia:hover {
+        background-image: url("img/11.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+    .zdj1{
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    div#fotografia1 {
+        position: absolute;
+        background-image: url("img/2.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+        
+    div#fotografia1:hover {
+        background-image: url("img/22.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+    .zdj2{
+        margin-left: 35%;
+        margin-top: 5%;
+    }
+
+    div#fotografia2 {
+        position: absolute;
+        background-image: url("img/3.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+            
+    div#fotografia2:hover {
+        background-image: url("img/33.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+    .zdj3{
+        margin-left: 55%;
+        margin-top: 5%;
+    }
+
+
+   
+    div#fotografia3 {
+        position: absolute;
+        background-image: url("img/4.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+        margin-top: 35%;
+        margin-left: -63.5%;
+    }
+                
+    div#fotografia3:hover {
+        background-image: url("img/44.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+    }
+                
+                
+
+    div#fotografia4 {
+        position: absolute;
+        background-image: url("img/5.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+        margin-top: 35%;
+        margin-left: -32%;
+    }
+                    
+    div#fotografia4:hover {
+        background-image: url("img/55.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+        }
+                    
+    div#fotografia5 {
+        position: absolute;
+        background-image: url("img/projekt11.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+        margin-top: 35%;
+        margin-right: 45%;
+        }
+
+    div#fotografia5:hover {
+        background-image: url("img/projekt2.jpg");
+        background-repeat: no-repeat;
+        width: 300px;
+        height: 450px;
+        }
+
+
+
+    div.naglowekDoRealizacji h3{
+        text-align: center;
+        padding-top: 5%;
+        text-transform:uppercase;
+        text-decoration: underline;
+        }
+
+    div.naglowekDoRealizacji p{
+        padding-top:2%;
+        padding-left: 10%;
+        padding-right: 10%;
+
+    }
+
+
+
+
+    .naglowekDoRealizacji h1{
+    text-align: center;
+    padding-top: 5%;
+    text-transform:uppercase;
+    text-decoration: underline;}
+
+
+    .galeriaZdjec{
+        display:flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin-top: -25%;
+
+    }
+
+    .galeria h4{
+        flex-basis: 10vh;
+        text-align: center;
+        line-height: 10vh;
+        background-color: black;
+        color: white;
+        
+       
+            }
+
+    .galeriaTatuazy {
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        
+
+    }
+    .galeriaTatuazy>div{
+        flex-basis: 21%;
+
+    }
+
+    section div img {
+        width: 100%;
+    }
+    
+    
+    .galeriaTatuazy img{
+        transition-duration: 3s;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .galeriaTatuazy img:hover {
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        z-index: 0;}
+
+    .AboutUs1 h1{
+    
+    text-align: center;
+    margin-top: 15%;
+    text-transform:uppercase;
+    text-decoration: underline;
+               
+    }
+
+    .AboutUs1 p{
+        padding-top:2%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+
+
+
+    .contact1 h2{
+    text-align: center;
+    margin-top: -15%;
+    text-transform:uppercase;
+    text-decoration: underline;
+
+    }
+
+
+    .contact1 .first p{
+        text-align: center;
+        margin-top: 2%;
+    }
+
+    .contact1 .first h4{
+        text-align: center;
+        margin-top: 2%;
+        
+        
+
+    }
+    
+    .contact1 .second h4 {
+        margin-top: -2.5%;
+        margin-left: 1%;
+    }
+    .contact1 .second .fa-phone{
+        
+        margin-left: 45%;
+        
+
+    }
+
+
+
+        
+
+
+
+    
+ 
+
+

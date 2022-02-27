@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>baner</title>
+    <link rel="stylesheet" href="font ikony/css/all.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" 
+    rel="stylesheet">
+</head>
+<body>
+    
+
+    <header>
+        <div class="logo">
+            <img src="img/logo5.png" alt=""></a>
+        </div>
+
+        <nav class="menu">
+            <ul class="klocki">
+                <li><a href="#oferta">Oferta</a></li>
+                <li><a href="#meta">Metamofrozy</a></li>
+                <li><a href="#realizacje">Realizacje</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>    
+        <div class="menu_ico">
+            <i class="fas fa-phone"></i>
+            <p class="telefon">734 264 472</p>
+        </div>
+    </header>
+
+    <section class="team">
+        <img src="img/s1.png" alt="dziewczyna 1 kolor"
+        class="color">
+        <img src="img/s1a.png" alt="dziewczya 1 szara"
+        class="gray">
+        <div class="member">
+            <h1>Anna Kowalska</h1>
+            <h2>Kolorowe tatuaże</h2>
+        </div>
+    </section>
+
+
+    <script>
+
+        //parametry
+        let activeElement = 0 
+
+
+
+        //Pobieranie elementów na których pracujemy
+        const colorImgHtml = 
+        document.querySelector('.color');
+        const grayImgHtml = 
+        document.querySelector('.gray');
+        const h1Html =
+        document.querySelector('.member h1');
+        const h2Html =
+        document.querySelector('.member h2')
+
+
+        //Informacje w tablicach o elementach podmienianych
+        const colorImage =['img/s1.png','img/s2.png', 'img/s3.png'];
+        const grayImage =['img/s1a.png','img/s2a.png', 'img/s3a.png'];
+        const names =['Anna Kowalska', 'Mateusz Por', 'Marcin Stefanek'];
+        const professions =['Kolorowe tatuaże', 'Cover tatuaży', 'Piercing'];
+    
+
+        function changeElement() {
+            console.log("automatyczne wywoływanie")
+            activeElement =activeElement+1;
+            if (activeElement == 3) {
+                activeElement = 0;
+            }
+
+            colorImgHtml.src = colorImage[activeElement];
+            grayImgHtml.src = grayImage[activeElement];
+            h1Html.textContent = names[activeElement];
+            h2Html.textContent = professions[activeElement];
+
+        }
+        
+        setInterval(changeElement, 4000)
+    </script>
+
+    
+
+    <section>
+        <div id="oferta">
+            <div class="naglowek">
+                <h1>Oferta</h1>
+                <p align="center"><b>Firma TattooMaking Białystok</b><p><center>Jest 
+                jedną z wiodących firm branży tatuaży. 
+                Specjalizuje się w szerokiej gamie usług. 
+                Naszym priorytetem jest dostarczanie projektów<br /> dopasowanych 
+                do potrzeb klienta. 
+                „Twoje Ciało- Twoja decyzja” to hasło, które kreuje standardy 
+                przedsiębiorstwa.</center></p>
+            </div>
+
+
+            <div class="znaczniki"> 
+                <h3 align="center">W ofercie firmy TattooMaking znajdują się 
+                    następujące usługi:</h3>
+                <div class="punkty">        
+            
+                <p align="center"><em>Laserowanie usuwanie tatuaży<br />
+                Projekty pracowników<br />
+                Wspaniała atmosfera<br />
+                Pielęgnacja tatuaży<br />
+                Przekuwanie uszu<br />
+                Cover tatuaży<br />
+                Dobra kawa </em></center></p>
+            
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div id="meta">
+                <div class="naglowek1">
+                <h1>metamorfozy</h1>    
+                <p align="center">Poniżej przedstawiamy tatuaże naszych klientów,<br /> których wygląd 
+                    całkowicie odmieniliśmy. Jest to kilka z wielu przemian, których 
+                    dokonaliśmy naszym klientom.
+                </p>
+
+                <h4>Przejedź na zdjęcie aby zobaczyć efekty naszej pracy:</h4>
+            </div>
+            <div class="zdjecia">
+            
+                <div class="zdj1">
+                    <div id="fotografia"></div>
+                <div class="zdj2">
+                    <div id="fotografia1"></div>
+                <div class="zdj3">
+                    <div id="fotografia2"></div>
+                <div class="zdj4">
+                    <div id="fotografia3"></div>     
+                <div class="zdj5">
+                    <div id="fotografia4"></div>      
+                <div class="zdj6"></div>
+                    <div id="fotografia5"></div>
+            </div>
+        </div>
+    </section>
+    <section></section>
+    
+    
+    
+    <section>
+        <div id="realizacje">
+            <div class="naglowekDoRealizacji">
+                <h1>Realizacje</h1>
+                <p align="center">Tatuaże firmy TattooMaking są projektowane z myślą o stworzeniu wymarzonego dzieła 
+                    o unikatowym charakterze. Cechuje je profesjonalizm i perfekcja wykonania widoczna
+                    w każdym elemencie. Wysoka jakość naszych usług oraz staranny dobór materiałów wynikają
+                    z naszej pasji.
+                    Firma TattooMaking jest idealnym dowodem na to, 
+                    że dobry poziom realizacji zlecenia idzie w parze z korzystną ceną.</p>
+            </div>
+        </section>
+            
+        <section class="galeriaZdjec">
+            <div class="galeria">
+                <h4>Galeria</h4>
+            </div>
+        
+            <div class="galeriaTatuazy">
+                <div>
+                    <img src="img/tato1.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato2.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato3.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato4.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato5.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato6.jpeg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato7.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato8.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato9.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato10.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato11.jpg" alt="">
+                </div>
+                <div>
+                    <img src="img/tato12.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div id="oNas">
+                <div class="AboutUs">
+                    <div class="AboutUs1">
+                <h1>O nas</h1>
+                <p>Perfekcja wykonania, olbrzymia dbałość o szczegóły oraz korzystny stosunek 
+                    jakości do ceny najlepiej charakteryzuje nasze działania. 
+                    Staramy się oto, by każdy tatuaż był oryginalny i unikatowy. 
+                    Zadowolenie klienta, spełnienie jego pomysłów i marzeń jest dla nas 
+                    głównym priorytetem przy tworzeniu projektów.  Tusze, których używamy, 
+                    podlega surowej selekcji oraz pochodzi z renomowanych firm. 
+                    Wybierając firmę TattooMaking, otrzymujesz gwarancję satysfakcji z wykonanych usług. 
+                    Ponadto każda oferta zawiera konkretny pakiet korzyści zaczynający się 
+                    od akceptacji i realizacji projektu po opiekę i porady dotyczące pielęgnacji 
+                    po jego zakończeniu. Wygląd Twojego tatuażu staje się naszą wizytówką, 
+                    dlatego dużą wagę przywiązujemy do kontrolowania jego stanu po realizacji 
+                    zlecenia. Jesteśmy w stanie realizować plany najbardziej 
+                    wymagających klientów.</p>
+                    </div>
+                </div>
+        </section>
+
+        <footer id="kontakt">
+            <div class="contact">
+                <div class="contact1">
+                    <h2>Kontakt</h2>
+                    <div class="first">
+                        <p>Masz pytania? Zadzwoń!</p>
+                        <h4>Marcin Stefanowski:</h4>
+                    <div class="second">
+                        
+                            <i class="fas fa-phone"></i>
+                        <h4>769 495 439</h4>
+
+                
+
+
+                    </div>
+                    </div>
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+        </footer>
+
+
+
+
+
+            </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
